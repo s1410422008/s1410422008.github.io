@@ -1,0 +1,1799 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/icon.ico">
+	<title>賴怡瑄的個人網站</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- myCSS -->
+	<link href="css/website.css" rel="stylesheet">
+	<!--Icon-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- typed -->
+	<script type="text/javascript" src="js/typed.min.js"></script>
+	<!-- Shuffle -->
+	<script type="text/javascript" src="js/shuffle.min.js"></script>
+	<!-- ShuffleCSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Magnific Popup core JS file -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- 導覽列連結卷軸 -->
+	<script>
+        $(document).ready(function(){
+        //目標為所有導航謝列按鈕，點擊事件觸發時
+        $(".navbar a, footer a, .jumbotron a").on('click', function(event) {
+        //將點擊按鈕的hash存起來
+        var hash = this.hash;
+        //使用animate方法移動卷軸到目標hash
+        $('html, body').animate({
+        scrollTop: $(hash).offset().top
+        }, 900);
+        });
+        })
+		//當視窗滾動時執行
+		$(window).scroll(function() {
+		  $(".slideanim").each(function(){
+			var pos = $(this).offset().top;
+
+			var winTop = $(window).scrollTop();
+			if (pos < winTop + 600) {
+			  $(this).addClass("slide");
+			}
+		  });
+		});
+		
+		//關於我菜單
+		$(document).ready(function() {
+			$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+				e.preventDefault();
+				$(this).siblings('a.active').removeClass("active");
+				$(this).addClass("active");
+				var index = $(this).index();
+				$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+				$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+			});
+		});
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    	<!-- 摺疊鈕 -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<!-- 導覽內容 -->
+		<div class="collapse navbar-collapse" id="collapseNavbar">
+				<ul class="nav navbar-nav">
+				<li><a href="#home">賴怡瑄</a></li>
+				<li><a href="#about">關於我</a></li>
+				<li><a href="#portfolio">作品集</a></li>
+				<li><a href="#contact">聯絡方式</a></li>
+				</ul>
+		</div>
+	</nav>
+    <!-- 首頁 -->
+    <div class="jumbotron container-fluid text-center" id="home">
+    	<div id="typed-strings1">
+			<h1>你好，我是賴怡瑄</h1>
+        </div>
+        <span id="typed1" style="font-size: 7.875vmin;line-height: 1.1"></span>
+		<br><br><br><br>
+    	<div id="typed-strings2">
+			<h3>歡迎來到我的個人網站😊</h3>
+        </div>
+        <span id="typed2" style="font-size: 2.4vmin;line-height: 1.1"></span>
+        <br><br><br><br>
+        <div class="row slide">
+			<div class="col-sm-4">
+			  <span class="fa fa-magic icon"></span>
+			  <h4>電腦繪圖</h4>
+			  <h5>Illustrator｜Photoshop｜Sai</h5>
+			</div>
+			<div class="col-sm-4">
+			  <span class="fa fa-desktop icon"></span>
+			  <h4>網頁設計</h4>
+			  <h5>HTML｜CSS｜jQuery｜Bootstrap｜Asp.Net｜SQL｜Flash</h5>
+			</div>
+			<div class="col-sm-4">
+			  <span class="fa fa-code icon"></span>
+			  <h4>程式設計</h4>
+			  <h5>JavaScript｜C++｜C#｜Unity｜Visual Basic｜Processing｜p5.js｜kinect</h5>
+			</div>
+		</div>
+        <br><br>
+        <div class="row slide">
+			<div class="col-sm-4">
+			  <span class="glyphicon glyphicon-camera icon"></span>
+			  <h4>動靜攝影</h4>
+			  <h5>Lightroom｜Premiere Pro｜PhotoImpact</h5>
+			</div>
+			<div class="col-sm-4">
+			  <span class="glyphicon glyphicon-film icon"></span>
+			  <h4>影音特效</h4>
+			  <h5>After Effects｜Animate｜PowerPoint｜Acid Pro｜Audition</h5>
+			</div>
+			<div class="col-sm-4">
+			  <span class="fa fa-cube icon"></span>
+			  <h4>3D動畫</h4>
+			  <h5>Cinema 4D｜Maya｜SketchUp｜LayOut｜Twinmotion｜Substance Painter</h5>
+			</div>
+		</div>
+		<br><br><br>
+        <a href="#about" title="To Start">
+    	<span class="glyphicon glyphicon-chevron-down aa slide"></span>
+  		</a>
+	</div>
+	<script>
+	  var typed = new Typed('#typed1', {
+		stringsElement: '#typed-strings1',
+		showCursor: false,
+		startDelay: 250,
+		typeSpeed: 100
+	  });
+	  var typed = new Typed('#typed2', {
+		stringsElement: '#typed-strings2',
+		showCursor: false,
+		startDelay: 1500,
+		typeSpeed: 100
+	  });
+	</script>
+    <!-- 關於我 -->
+    <div class="container-fluid text-center row" id="about">
+    	<!-- 關於我選單 -->
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+          <div class="list-group">
+            <a href="#" class="list-group-item active centerVA" id="s-list">
+              <h4 class="fas fa-user-circle"><br/></h4>基本資料
+            </a>
+            <a href="#" class="list-group-item centerVA">
+              <h4 class="fa fa-tasks"><br/></h4>技能專長
+            </a>
+            <a href="#" class="list-group-item centerVA">
+              <h4 class="fa fa-trophy"><br/></h4>獲獎紀錄
+            </a>
+            <a href="#" class="list-group-item centerVA">
+              <h4 class="fa fa-briefcase"><br/></h4>接案經歷
+            </a>
+            <a href="#" class="list-group-item centerVA">
+              <h4 class="fas fa-address-card"><br/></h4>專業證照
+            </a>
+          </div>
+        </div>
+        <!-- 關於我內頁 -->
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+            <div class="bhoechie-tab-content text-center active">
+                <center style="position: absolute;width:100%;color:#55518a;padding: 65px 0">
+                	<h4 style="font-size: 1.8vmin">1996 彰化<br></h4>
+                	<h3 style="font-size: 2.4vmin">國立臺中科技大學 多媒體設計系<br></h3>
+                	<h4 style="font-size: 1.8vmin"><br>國立彰化高級商業職業學校 資料處理科<br></h4>
+                	<h2 style="font-size: 3.6vmin">賴怡瑄</h2><br>
+            		<img src="./img/I.jpg" class="img-responsive img-circle" alt="賴怡瑄" width="500px" style="object-fit: cover">
+                </center>
+            </div>
+            <div class="bhoechie-tab-content">
+                <center style="color:#55518a;padding: 0px 50px;text-align:left;height:  950px">
+                    <div class="row">
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-8 s-h">
+                        	<br><br><br><br><br>
+                            <p class="p-S"><span class="label label-default">電腦繪圖</span>　Illustrator｜Photoshop｜Sai</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                90%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">網頁設計</span>　HTML｜CSS｜jQuery｜Bootstrap｜Asp.Net｜SQL｜Flash</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                95%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">程式設計</span>　JavaScript｜C++｜C#｜Unity｜Visual Basic｜Processing｜p5.js｜kinect</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                75%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">動靜攝影</span>　Lightroom｜Premiere Pro｜PhotoImpact</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                85%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">影音特效</span>　After Effects｜Animate｜PowerPoint｜Acid Pro｜Audition</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                80%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">３Ｄ動畫</span>　Cinema 4D｜Maya｜3ds Max｜SketchUp｜LayOut｜Twinmotion｜Substance Painter</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                80%
+                                </div>
+                            </div>
+                            <p class="p-S"><span class="label label-default">文書處理</span>　Word｜Excel｜PowerPoint｜Access｜Visio</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                95%
+                                </div>
+                            </div>
+					    </div>
+                        <div class="col-sm-2">
+                        </div>
+					</div>
+                </center>
+            </div>
+            <div class="bhoechie-tab-content">
+                <center style="color:#55518a">
+                	<div class="row" style="margin: 0">
+                		<div class="col-sm-6 centerVA a-s-s" style="background-color:#CCC"><h3>108<br>放視大賞<br>遊戲類-PC遊戲創作組<br>第二階段入圍</h3></div>
+                		<div class="col-sm-6 centerVA a-s-s" style="background-color:#DDD"><h3>108<br>放視大賞<br>創意企劃類<br>第一階段入圍</h3></div>
+                	</div>
+                	<div class="row" style="margin: 0">
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#EEE"><h3>106<br>石岡吉祥物<br>水滴寶寶命名活動<br>第一名</h3></div>
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#CCC"><h3>106<br>走讀新臺中<br>公車上下的臺中風景<br>圖文創作競賽<br>第三名</h3></div>
+                	</div>
+                	<div class="row" style="margin: 0">
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#DDD"><h3>103<br>全國高級中等學校<br>學生技藝競賽<br>網頁設計職種<br>優勝</h3></div>
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#EEE"><h3>102<br>國立彰化高級商業職業學校<br>資料處理科專題製作競賽<br>優選</h3></div>
+                	</div>
+                	<div class="row" style="margin: 0">
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#CCC"><h3>102<br>國立彰化高級商業職業學校<br>技藝競賽網頁設計職種<br>第一名</h3></div>
+                		<div class="col-sm-6 centerVA a-s" style="background-color:#DDD"><h3>99<br>彰化縣師生創用CC電腦繪圖競賽<br>優等</h3></div>
+                	</div>
+                </center>
+            </div>
+            <div class="bhoechie-tab-content">
+				 <!-- Vertical Timeline -->
+				  <section id="conference-timeline">
+					<div class="timeline-start"></div>
+					<div class="conference-center-line"></div>
+					<div class="conference-timeline-content">
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">影片特效合成</span></p>
+							<p>日毓光電股份有限公司</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">108</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-left-container">
+						  <div class="content-left">
+						  <p><span class="article-number">商品照校正修圖</span></p>
+							<p>富發牌國民鞋</p>
+						  </div>
+						</div>
+						<div class="meta-date">
+						  <span class="year">107</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">學生實習美術｜UI｜網頁設計……</span></p>
+							<p>FK Digital福克科技有限公司</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">107</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-left-container">
+						  <div class="content-left">
+						  <p><span class="article-number">商標｜招牌｜名片設計</span></p>
+							<p>Lia's儷而詩進口精品服飾百貨</p>
+						  </div>
+						</div>
+						<div class="meta-date">
+						  <span class="year">107</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">廣告設計</span></p>
+							<p>A MAH' SPAAN</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">106</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-left-container">
+						  <div class="content-left">
+						  <p><span class="article-number">新生刊物設計</span></p>
+							<p>國立屏東科技大學</p>
+						  </div>
+						</div>
+						<div class="meta-date">
+						  <span class="year">105</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">網頁設計</span></p>
+							<p>恒加建設有限公司</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">104</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-left-container">
+						  <div class="content-left">
+						  <p><span class="article-number">商標設計</span></p>
+							<p>Jiuan²Bow²</p>
+						  </div>
+						</div>
+						<div class="meta-date">
+						  <span class="year">104</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">平面設計</span></p>
+							<p>油廠社區文化生態保存協會</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">104</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-left-container">
+						  <div class="content-left">
+						  <p><span class="article-number">畢業紀念冊設計</span></p>
+							<p>國立彰化高級商業職業學校</p>
+						  </div>
+						</div>
+						<div class="meta-date">
+						  <span class="year">104</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					  <div class="timeline-article">
+						<div class="content-right-container">
+						  <div class="content-right">
+						  <p><span class="article-number">教學成果展設計</span></p>
+							<p>國立彰化高級商業職業學校</p>
+						  </div>
+						</div>
+						<div class="meta-date-S">
+						  <span class="year">103</span>
+						</div>
+					  </div>
+					  <!-- Article -->
+					</div>
+				  </section>
+            </div>
+            <div class="bhoechie-tab-content">
+                <center style="color:#55518a;padding: 100px 0 0 0">
+                	<div class="row" style="margin: 0">
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="col-sm-10" style="padding: 0">
+							<table class="table table-hover" style="font-size: 1.8vmin">
+							  <thead>
+								<tr>
+								  <th>時間</th>
+								  <th>檢定機構</th>
+								  <th>類別</th>
+								  <th>級別</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td>107</td>
+								  <td>Adobe Certified Associate</td>
+								  <td>photoshop®</td>
+								  <td>CC 2015</td>
+								</tr>
+								<tr>
+								  <td>104</td>
+								  <td>行政院勞工委員會</td>
+								  <td>電腦軟體應用</td>
+								  <td>乙級</td>
+								</tr>
+								<tr>
+								  <td>103</td>
+								  <td>電腦技能基金會（TQC）</td>
+								  <td>Excel 2010</td>
+								  <td>進階級</td>
+								</tr>
+								<tr>
+								  <td>103</td>
+								  <td>電腦技能基金會（TQC）</td>
+								  <td>英文輸入</td>
+								  <td>實用級</td>
+								</tr>
+								<tr>
+								  <td>102</td>
+								  <td>行政院勞工委員會</td>
+								  <td>電腦軟體應用</td>
+								  <td>丙級</td>
+								</tr>
+								<tr>
+								  <td>102</td>
+								  <td>行政院勞工委員會</td>
+								  <td>會計事務－人工記帳</td>
+								  <td>丙級</td>
+								</tr>
+								<tr>
+								  <td>100</td>
+								  <td>電腦技能基金會（TQC）</td>
+								  <td>中文輸入</td>
+								  <td>進階級</td>
+								</tr>
+							  </tbody>
+							</table>
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+					</div>
+                </center>
+            </div>
+        </div>
+	</div>
+	<!-- 作品集 -->
+    <div class="container-fluid text-center" id="portfolio">
+    	<!-- 作品按鈕 -->
+    	<div class="btn-group filter-options p-menu">
+            <button class="btn btn--primary bts active" id="ALL">ALL</button>
+            <button class="btn btn--primary bts" id="ART">ART</button>
+            <button class="btn btn--primary bts" id="WEB">WEB</button>
+            <button class="btn btn--primary bts" id="APP">APP</button>
+            <button class="btn btn--primary bts" id="DESIGN">DESIGN</button>
+            <button class="btn btn--primary bts" id="3D">3D</button>
+            <button class="btn btn--primary bts" id="PHOTOGRAPHY">PHOTOGRAPHY</button>
+            <button class="btn btn--primary bts" id="ANIMATION">ANIMATION</button>
+		</div>
+		<!-- 作品集內容 -->
+		<div class="shuffle-wrap">
+			<div class="my-grid-with-images my-shuffle-container row">
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/W01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/W01.jpg"/>
+								<div class="overlay">
+									<div class="text">響應式個人網站第一版</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=tHt6KplEx7c">
+							<div class="con">
+								<img class="imagess" src="./img/W02.jpg"/>
+								<div class="overlay">
+									<div class="text">恆加建設有限公司網站</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/W03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/W03.jpg"/>
+								<div class="overlay">
+									<div class="text">全國技藝競賽網站</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/W04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/W04.jpg"/>
+								<div class="overlay">
+									<div class="text">2014個人成果展示</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/W05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/W05.jpg"/>
+								<div class="overlay">
+									<div class="text">Asp.Net 活動報名管理系統</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/W06.png">
+							<div class="con">
+								<img class="imagess" src="./img/W06.png"/>
+								<div class="overlay">
+									<div class="text">自動餵食器 響應式網頁</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T01.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D 角色建模</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T02.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T02.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D Low Poly場景建模</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T03.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D 迷你房屋建模</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T04.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D 場景設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T05.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D 螺旋建築</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T06.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/T06.jpg"/>
+								<div class="overlay">
+									<div class="text">C4D 沙灘與海晶體</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R01.jpg"/>
+								<div class="overlay">
+									<div class="text">2011 鉛筆素描</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R02.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R02.jpg"/>
+								<div class="overlay">
+									<div class="text">2011 水彩與鉛筆素描</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R03.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 電腦繪圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R04.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 原子筆 幾何材質</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R05.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 鉛筆手繪</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R06.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R06.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 粉彩畫作</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R07.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R07.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 版畫</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R08.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R08.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 艾瑪．華森臨摹</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R09.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R09.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 帶針筆 造型設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R10.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R10.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 電繪 魍魎之匣</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R11.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R11.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 Ai向量繪圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R12.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R12.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 Ai向量繪圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R13.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R13.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 電繪 亞特蘭提斯</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R14.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R14.jpg"/>
+								<div class="overlay">
+									<div class="text">2016 Low Poly 金城武</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R15.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R15.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 電腦繪圖 蝕</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R16.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R16.jpg"/>
+								<div class="overlay">
+									<div class="text">2015 電繪仿畫 雷霆</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R17.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R17.jpg"/>
+								<div class="overlay">
+									<div class="text">2014 鼠繪 魔菇</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R18.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R18.jpg"/>
+								<div class="overlay">
+									<div class="text">2014 電繪臨摹 古墓奇兵</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R19.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R19.jpg"/>
+								<div class="overlay">
+									<div class="text">2018 電繪 紫羅蘭</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R20.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/R20.jpg"/>
+								<div class="overlay">
+									<div class="text">2018 電繪 草莓棉花糖漸層飲</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A01.jpg"/>
+								<div class="overlay">
+									<div class="text">專題 魔法塗鴉筆記本 APP</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A02.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A02.jpg"/>
+								<div class="overlay">
+									<div class="text">美術與企劃 咕嚕咕嚕 手遊</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A03.jpg"/>
+								<div class="overlay">
+									<div class="text">永續環境學區環保店 APP</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A04.jpg"/>
+								<div class="overlay">
+									<div class="text">美術與企劃 吻仔魚 手遊</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D01.jpg"/>
+								<div class="overlay">
+									<div class="text">Jiuan²Bow² 商標設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D02.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D02.jpg"/>
+								<div class="overlay">
+									<div class="text">儷而詩 邀請卡設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D03.jpg"/>
+								<div class="overlay">
+									<div class="text">儷而詩 名片設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D04.jpg"/>
+								<div class="overlay">
+									<div class="text">秋攝 旅遊企劃製作</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D05.jpg"/>
+								<div class="overlay">
+									<div class="text">咕嚕咕嚕 遊戲宣傳海報</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D06.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D06.jpg"/>
+								<div class="overlay">
+									<div class="text">彰化高商 畢業紀念冊設計與照片編修</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D07.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D07.jpg"/>
+								<div class="overlay">
+									<div class="text">屏科大 新生刊物設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D08.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D08.jpg"/>
+								<div class="overlay">
+									<div class="text">魔法塗鴉筆記本 海報設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D09.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D09.jpg"/>
+								<div class="overlay">
+									<div class="text">資處 教學成果展橫幅</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D10.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D10.jpg"/>
+								<div class="overlay">
+									<div class="text">創意馬克杯設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D11.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D11.jpg"/>
+								<div class="overlay">
+									<div class="text">手機殼設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D12.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/D12.jpg"/>
+								<div class="overlay">
+									<div class="text">儷而詩 橫招牌</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D13.png">
+							<div class="con">
+								<img class="imagess" src="./img/D13.png"/>
+								<div class="overlay">
+									<div class="text">自動餵食器 海報設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D14.png">
+							<div class="con">
+								<img class="imagess" src="./img/D14.png"/>
+								<div class="overlay">
+									<div class="text">黑雨 海報設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D15.png">
+							<div class="con">
+								<img class="imagess" src="./img/D15.png"/>
+								<div class="overlay">
+									<div class="text">黑雨 名片設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P01.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P01.jpg"/>
+								<div class="overlay">
+									<div class="text">寵物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P02.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P02.jpg"/>
+								<div class="overlay">
+									<div class="text">靜物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P03.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P03.jpg"/>
+								<div class="overlay">
+									<div class="text">微距攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P04.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P04.jpg"/>
+								<div class="overlay">
+									<div class="text">寵物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P05.jpg"/>
+								<div class="overlay">
+									<div class="text">自然景觀攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P06.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P06.jpg"/>
+								<div class="overlay">
+									<div class="text">人像光繪攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P07.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P07.jpg"/>
+								<div class="overlay">
+									<div class="text">寵物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P08.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P08.jpg"/>
+								<div class="overlay">
+									<div class="text">自然景觀攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P09.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P09.jpg"/>
+								<div class="overlay">
+									<div class="text">寵物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P10.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P10.jpg"/>
+								<div class="overlay">
+									<div class="text">寵物攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P11.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P11.jpg"/>
+								<div class="overlay">
+									<div class="text">建築構圖攝影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P12.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/P12.jpg"/>
+								<div class="overlay">
+									<div class="text">布料材質12色相環</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=l2vENJxpNXU">
+							<div class="con">
+								<img class="imagess" src="./img/P13.jpg"/>
+								<div class="overlay">
+									<div class="text">看不見的黑暗 微電影</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["PHOTOGRAPHY"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/P14.gif">
+							<div class="con">
+								<img class="imagess" src="./img/P14.jpg"/>
+								<div class="overlay">
+									<div class="text">光繪 GIF</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ANIMATION"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=z4GRwf8tbRU">
+							<div class="con">
+								<img class="imagess" src="./img/F01.jpg"/>
+								<div class="overlay">
+									<div class="text">Maya 角色動作擷取1</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ANIMATION"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=aJk6lvU1fFM">
+							<div class="con">
+								<img class="imagess" src="./img/F02.jpg"/>
+								<div class="overlay">
+									<div class="text">Maya 角色動作擷取2</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ANIMATION"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=WmvR_bYA3Fo">
+							<div class="con">
+								<img class="imagess" src="./img/F03.jpg"/>
+								<div class="overlay">
+									<div class="text">冰極 偶動畫</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ANIMATION"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/F04.gif">
+							<div class="con">
+								<img class="imagess" src="./img/F04.jpg"/>
+								<div class="overlay">
+									<div class="text">手翻書 GIF</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ANIMATION"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=Zpcexdmu-K0">
+							<div class="con">
+								<img class="imagess" src="./img/F05.jpg"/>
+								<div class="overlay">
+									<div class="text">AE 角色出場動畫</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A05.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A05.jpg"/>
+								<div class="overlay">
+									<div class="text">VB 踩地雷遊戲</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A06.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A06.jpg"/>
+								<div class="overlay">
+									<div class="text">VB 計算機</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A07.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A07.jpg"/>
+								<div class="overlay">
+									<div class="text">Processing 發散動畫</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A08.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A08.jpg"/>
+								<div class="overlay">
+									<div class="text">Processing 時鐘動畫</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/A09.jpg">
+							<div class="con">
+								<img class="imagess" src="./img/A09.jpg"/>
+								<div class="overlay">
+									<div class="text">Processing 吸色幾何筆刷</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=kITPxM_ylgs">
+							<div class="con">
+								<img class="imagess" src="./img/A10.jpg"/>
+								<div class="overlay">
+									<div class="text">Kinect 互動魔法特效</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["APP"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=DkQM9-OIJaw">
+							<div class="con">
+								<img class="imagess" src="./img/A11.png"/>
+								<div class="overlay">
+									<div class="text">Unity 砌石遊戲</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["WEB"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=2ikl-nTA_8g">
+							<div class="con">
+								<img class="imagess" src="./img/W07.png"/>
+								<div class="overlay">
+									<div class="text">Chaos Code 歷史的軌跡網站</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=-GC7nKK0KHQ">
+							<div class="con">
+								<img class="imagess" src="./img/F06.jpg"/>
+								<div class="overlay">
+									<div class="text">SketchUp&Twinmotion 展演設計</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=Rk9f3pgm-FI">
+							<div class="con">
+								<img class="imagess" src="./img/T07.png"/>
+								<div class="overlay">
+									<div class="text">黑雨 場景建模</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R21.png">
+							<div class="con">
+								<img class="imagess" src="./img/R21.png"/>
+								<div class="overlay">
+									<div class="text">大繁盛！滿腹市場 宣傳圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R22.png">
+							<div class="con">
+								<img class="imagess" src="./img/R22.png"/>
+								<div class="overlay">
+									<div class="text">大繁盛！滿腹市場 宣傳圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["ART"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/R23.png">
+							<div class="con">
+								<img class="imagess" src="./img/R23.png"/>
+								<div class="overlay">
+									<div class="text">大繁盛！滿腹市場 宣傳圖</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["DESIGN"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/D16.png">
+							<div class="con">
+								<img class="imagess" src="./img/D16.png"/>
+								<div class="overlay">
+									<div class="text">校外實習成果海報</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<figure class="js-item img-item col-1@md col-3@sm col-3@xs picture-item" data-groups='["3D"]'>
+				  <div class="aspect aspect--none">
+					<div class="aspect__inner">
+						<a class="image-popup-no-margins" href="./img/T08.gif">
+							<div class="con">
+								<img class="imagess" src="./img/T08.png"/>
+								<div class="overlay">
+									<div class="text">C4D 煉金術概念場景</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				  </div>
+				</figure>
+				<div class=" col-1@md col-3@sm col-3@xs my-sizer-element"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+      $(document).ready(function() {
+        $('.image-popup-no-margins').magnificPopup({
+          type: 'image',
+          closeOnContentClick: true,
+          closeBtnInside: false,
+          fixedContentPos: true,
+          mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+          image: {
+            verticalFit: true
+          },
+          zoom: {
+            enabled: true,
+            duration: 300 // don't foget to change the duration also in CSS
+          }
+        });
+        $('.popup-youtube').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+
+          fixedContentPos: false
+        });
+      });
+    </script>
+	<!-- 聯絡方式 -->
+    <div class="container-fluid text-center" id="contact">
+    	<div class="row" style="padding-top:50px">
+    		<div class="col-sm-3 centerVA c-h">
+    			<a href="https://www.facebook.com/messages/t/100001631390417" style="color:#4267b2">
+    				<h1 class="fab fa-facebook-square" style="font-size:200px"></h1>
+    			</a>
+    			<h4>賴怡瑄</h1>
+    		</div>
+    		<div class="col-sm-3 centerVA c-h">
+    			<a href="tel:0937-748-025" style="color:#0084FF">
+    			<h1 class="fas fa-phone-square" style="font-size:200px"></h1>
+    			</a>
+    			<h4>0937-748025</h1>
+    		</div>
+    		<div class="col-sm-3 centerVA c-h">
+    			<a href="mailto:s1410422008@gms.nutc.edu.tw" style="color:#d14836;padding-top:17px">
+    				<h1 class="fas fa-envelope-square" style="font-size:200px"></h1>
+    			</a>
+    			<h4>s1410422008<br>@gms.nutc.edu.tw</h1>
+    		</div>
+    		<div class="col-sm-3 centerVA c-h">
+    			<a href="http://line.me/ti/p/80-bu-hkBF" style="color:#00b900">
+    			<h1 class="fab fa-line" style="font-size:200px"></h1>
+    			</a>
+    			<h4>ID:0937748025</h1>
+    		</div>
+    	</div>
+	</div>
+    <!-- 底 -->
+	<footer class="text-center">
+		<a href="#home" title="To Top">
+    	<span class="glyphicon glyphicon-chevron-up"></span>
+  		</a>
+		<br><p style="font-size: 1.475vmin;position: relative;">Copyright © 2018 賴怡瑄. All rights reserved.</p> 
+	</footer>
+	<script>
+		//作品集展示
+		var Shuffle = window.Shuffle;
+		var element = document.querySelector('.my-shuffle-container');
+		var sizer = element.querySelector('.my-sizer-element');
+
+		var shuffleInstance = new Shuffle(element, {
+		  itemSelector: '.picture-item',
+		  sizer: sizer
+		});
+		
+		$("#ALL").on("click", function(){
+		   shuffleInstance.filter();
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#ART").on("click", function(){
+		   shuffleInstance.filter('ART');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#WEB").on("click", function(){
+		   shuffleInstance.filter('WEB');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#APP").on("click", function(){
+		   shuffleInstance.filter('APP');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#DESIGN").on("click", function(){
+		   shuffleInstance.filter('DESIGN');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#3D").on("click", function(){
+		   shuffleInstance.filter('3D');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#PHOTOGRAPHY").on("click", function(){
+		   shuffleInstance.filter('PHOTOGRAPHY');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+		$("#ANIMATION").on("click", function(){
+		   shuffleInstance.filter('ANIMATION');
+		   $( '.filter-options' ).find( 'button.active' ).removeClass( 'active' );
+		   $( this ).addClass( 'active' );
+		});
+	</script>
+</body>
+</html>
